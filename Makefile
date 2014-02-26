@@ -15,13 +15,18 @@ custom_top:
 	ocamlbuild -pkgs ounit src/tgeoip.cma
 	ocamlmktop -custom -cclib -lGeoIp _build/src/tgeoip_stubs.o _build/src/tgeoip.cma -o myutop
 
-#
-# Builds a .cma file. Not sure how to use it in an UTOP thing yet.
-#
 build:
-	 ocamlbuild -use-ocamlfind -pkgs ounit src/tgeoip.cma
+	ocamlbuild -use-ocamlfind -pkgs ounit src/tgeoip.cma
 
-# See this for more information.
 #
-# https://github.com/ocamllabs/ocaml-ctypes/issues/51#issuecomment-30729675
+# I can easily build the .cma using
 #
+#    ocamlbuild -use-ocamlfind -pkgs ounit src/tgeoip.cma
+#
+# But I can't figure out how to install it.
+#
+# I can run:
+#
+#     ocamlfind install tgeoip META
+#
+# But that just places the MEATA file somewhere
