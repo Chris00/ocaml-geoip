@@ -37,7 +37,7 @@ let pkg_config_lib ~lib ~has_lib ~stublib =
 let () = 
   dispatch begin function
   | After_rules ->
-      pkg_config_lib ~lib:"geoip" ~has_lib:"-DHAS_GEOIP" ~stublib:"geolocalisation"
+      pkg_config_lib ~lib:"geoip" ~has_lib:"-DHAS_GEOIP" ~stublib:"tgeoip"
   | _ -> ()
   end
     

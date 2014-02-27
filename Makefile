@@ -15,18 +15,8 @@ custom_top:
 	ocamlbuild -pkgs ounit src/tgeoip.cma
 	ocamlmktop -custom -cclib -lGeoIp _build/src/tgeoip_stubs.o _build/src/tgeoip.cma -o myutop
 
-build:
-	ocamlbuild -use-ocamlfind -pkgs ounit src/tgeoip.cma
+pkg:
+	ocamlbuild -use-ocamlfind -package ounit tgeoip.{mli,cmi,cmx,cma,a,cmxa,cmxs} dlltgeoip.so META
 
-#
-# I can easily build the .cma using
-#
-#    ocamlbuild -use-ocamlfind -pkgs ounit src/tgeoip.cma
-#
-# But I can't figure out how to install it.
-#
-# I can run:
-#
-#     ocamlfind install tgeoip META
-#
-# But that just places the MEATA file somewhere
+install:
+	ocamlfind install tgeoip META _build/src/tgeoip.{mli,cmi,cmx,cma,a,cmxa,cmxs} _build/src/dlltgeoip.so

@@ -1,4 +1,6 @@
 
+<src> : include
+
 <src/tgeoip.{cma,cmxa,cmxs}> : use_geoip
 
 <src/libtgeoip.*> : use_geoip

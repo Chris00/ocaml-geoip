@@ -1,0 +1,14 @@
+lib: [
+"_build/META" {"META"}
+"_build/src/tgeoip.mli" {"tgeoip.mli"}
+"?_build/src/tgeoip.cmti" {"tgeoip.cmti"}
+"_build/src/tgeoip.cmi" {"tgeoip.cmi"}
+"_build/src/tgeoip.cmx" {"tgeoip.cmx"}
+"_build/src/tgeoip.cma" {"tgeoip.cma"}
+"_build/src/tgeoip.a" {"tgeoip.a"}
+"_build/src/tgeoip.cmxa" {"tgeoip.cmxa"}
+"_build/src/tgeoip.cmxs" {"tgeoip.cmxs"}
+]
+stublibs: [
+"_build/src/dlltgeoip.so" {"dlltgeoip.so"}
+]
