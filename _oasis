@@ -1,0 +1,38 @@
+#                                                               -*-conf-*-
+OASISFormat: 0.3
+Name:        geoip
+Version:     0.1
+Synopsis:    Thin wrapper around the GeoIP library
+Description: This library enables you to identify the location, organization,
+  connection speed, and user type of your Internet visitors.
+Authors:     Mads Hartmann Jensen <mhj@issuu.com>
+License:     LGPL-3.0 with OCaml linking exception
+Plugins:     META (0.3), StdFiles (0.3)
+Homepage:    https://github.com/mads379/ocaml-geoip
+
+Library "tgeoip"
+  Path:	      src
+  BuildTools: ocamlbuild
+  Modules:    Tgeoip
+  CSources:   tgeoip_stubs.c
+# pkg-config used in myocamlbuild
+#  CCOpt:      -lGeoIP
+
+Executable unittests
+  Build$:         flag(tests)
+  Path:           src
+  MainIs:         unittests.ml
+  BuildDepends:   tgeoip, oUnit (>= 2.0.0)
+  BuildTools:     ocamlbuild
+  Install:        false
+
+Test unit
+  Type: Custom (0.3)
+  Command: $unittests
+
+
+
+SourceRepository master
+  Type:       git
+  Location:   https://github.com/mads379/ocaml-geoip.git
+  Browser:    https://github.com/mads379/ocaml-geoip

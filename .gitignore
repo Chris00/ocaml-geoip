@@ -1,2 +1,7 @@
 _build/
 .DS_Store
+setup.data
+setup.log
+setup.ml
+*.byte
+*.native

@@ -1,0 +1,4 @@
+depexts: [
+  [ [ "debian"  ] [ "libgeoip-dev" ] ]
+  [ [ "ubuntu"  ] [ "libgeoip-dev" ] ]
+]

@@ -1,7 +1,0 @@
-version = "0.1"
-description = "Thin wrapper around geoip"
-archive(byte) = "tgeoip.cma"
-archive(byte, plugin) = "tgeoip.cma"
-archive(native) = "tgeoip.cmxa"
-archive(native, plugin) = "tgeoip.cmxs"
-exists_if = "tgeoip.cma"
